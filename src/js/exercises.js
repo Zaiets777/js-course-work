@@ -1,5 +1,5 @@
 import { YourEnergyAPI } from './api-service';
-import { openModal } from './modal-exercise.js'; // 👈 1. Додано імпорт
+import { openModal } from './modal-exercise.js';
 
 const api = new YourEnergyAPI();
 const list = document.querySelector('.js-exercises-list');
@@ -18,15 +18,19 @@ let isExercisesView = false;
 // --- 1. ФУНКЦІЇ РОЗМІТКИ ---
 
 function createCategoryMarkup(arr) {
-  return arr.map(({ name, filter, imgUrl }) => `
-    <li class="exercises-item js-category-item" data-name="${name}" data-filter="${filter}">
+  return arr.map((item) => {
+    // 🔥 ВИПРАВЛЕННЯ: перевіряємо обидва варіанти назви властивості
+    const image = item.imgUrl || item.imgURL;
+
+    return `
+    <li class="exercises-item js-category-item" data-name="${item.name}" data-filter="${item.filter}">
       <div class="exercise-card" 
-           style="background: linear-gradient(0deg, rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('${imgUrl}'); background-size: cover; background-position: center;">
-        <h3 class="exercise-name">${name}</h3>
-        <p class="exercise-filter">${filter}</p>
+           style="background: linear-gradient(0deg, rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('${image}'); background-size: cover; background-position: center;">
+        <h3 class="exercise-name">${item.name}</h3>
+        <p class="exercise-filter">${item.filter}</p>
       </div>
     </li>
-  `).join('');
+  `}).join('');
 }
 
 function createExerciseMarkup(arr) {
@@ -191,7 +195,7 @@ if (list) {
     const startBtn = e.target.closest('.js-start-btn');
     if (startBtn) {
       const id = startBtn.dataset.id;
-      openModal(id); // 👈 2. Викликаємо функцію відкриття
+      openModal(id);
     }
   });
 }
