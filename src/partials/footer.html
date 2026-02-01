@@ -1,15 +1,59 @@
 <footer class="footer">
-  <div class="container">
-    <p class="footer-desc">
-      Made with ✨ by
-      <a
-        class="footer-link"
-        href="https://goit.global/ua/"
-        target="_blank"
-        rel="noopener noreferrer"
-      >
-        GoIT team
+  <div class="container footer-container">
+    <div class="footer-logo-block">
+      <a href="./index.html" class="logo footer-logo">
+        your<span class="logo-accent">energy</span>
       </a>
-    </p>
+
+      <ul class="footer-socials">
+        <li>
+          <a href="#" class="footer-social-link" aria-label="Facebook">FB</a>
+        </li>
+        <li>
+          <a href="#" class="footer-social-link" aria-label="Instagram">IG</a>
+        </li>
+        <li>
+          <a href="#" class="footer-social-link" aria-label="YouTube">YT</a>
+        </li>
+      </ul>
+    </div>
+
+    <div class="footer-subscribe-block">
+      <h3 class="footer-title">Subscribe to our newsletter</h3>
+      <p class="footer-text">
+        Stay updated with the latest news and special offers.
+      </p>
+
+      <form class="footer-form js-footer-form">
+        <input
+          type="email"
+          name="email"
+          class="footer-input"
+          placeholder="Enter your email"
+          required
+        />
+        <button type="submit" class="footer-btn">Subscribe</button>
+      </form>
+    </div>
   </div>
 </footer>
+<button
+  id="scrollToTopBtn"
+  class="scroll-up-btn is-hidden"
+  aria-label="Scroll to top"
+>
+  <svg
+    width="24"
+    height="24"
+    viewBox="0 0 24 24"
+    stroke="currentColor"
+    fill="none"
+  >
+    <path
+      d="M5 15L12 8L19 15"
+      stroke-width="2"
+      stroke-linecap="round"
+      stroke-linejoin="round"
+    />
+  </svg>
+</button>
