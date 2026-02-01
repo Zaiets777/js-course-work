@@ -1,0 +1,364 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Your Energy</title>
+    <script type="module" crossorigin src="/js-course-work/index.js"></script>
+    <link rel="modulepreload" crossorigin href="/js-course-work/assets/scroll-up-Bd-b3WRV.js">
+    <link rel="stylesheet" crossorigin href="/js-course-work/assets/scroll-up-B9oNij3p.css">
+  </head>
+  <body>
+    <header class="header">
+  <div class="container header-container">
+    <a href="./index.html" class="logo">
+      your<span class="logo-accent">energy</span>
+    </a>
+
+    <nav class="nav">
+      <ul class="nav-list">
+        <li class="nav-item">
+          <a href="./index.html" class="nav-link">Home</a>
+        </li>
+        <li class="nav-item">
+          <a href="./favorites.html" class="nav-link">Favorites</a>
+        </li>
+      </ul>
+    </nav>
+
+    <div class="socials">
+      <a href="#" class="social-link">FB</a>
+      <a href="#" class="social-link">IG</a>
+      <a href="#" class="social-link">YT</a>
+    </div>
+
+    <button type="button" class="burger-btn js-open-menu">
+      Menu
+      <svg
+        width="24"
+        height="24"
+        viewBox="0 0 24 24"
+        stroke="currentColor"
+        fill="none"
+      >
+        <path
+          d="M4 6H20M4 12H20M4 18H20"
+          stroke-width="2"
+          stroke-linecap="round"
+        />
+      </svg>
+    </button>
+  </div>
+
+  <div class="mobile-menu js-menu-container">
+    <div class="container mobile-menu-container">
+      <button type="button" class="mobile-close-btn js-close-menu">
+        <svg
+          width="24"
+          height="24"
+          viewBox="0 0 24 24"
+          stroke="currentColor"
+          fill="none"
+        >
+          <path
+            d="M18 6L6 18M6 6L18 18"
+            stroke-width="2"
+            stroke-linecap="round"
+          />
+        </svg>
+      </button>
+
+      <nav class="mobile-nav">
+        <a href="./index.html" class="mobile-nav-link">Home</a>
+        <a href="./favorites.html" class="mobile-nav-link">Favorites</a>
+      </nav>
+
+      <div class="mobile-socials">
+        <a href="#" class="mobile-social-link">FB</a>
+        <a href="#" class="mobile-social-link">IG</a>
+        <a href="#" class="mobile-social-link">YT</a>
+      </div>
+    </div>
+  </div>
+</header>
+
+
+    <main>
+      <section class="hero">
+  <div class="container hero-container">
+    <div class="quote-wrapper">
+      <div class="quote-card">
+        <div class="quote-icon">
+          <svg
+            width="20"
+            height="20"
+            viewBox="0 0 20 20"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M4.375 18.4375L1.25 15.9375L3.4375 13.75L5.625 15.3125L8.125 12.1875L6.25 10L6.875 7.1875L9.6875 5.625L11.875 3.4375L10.9375 1.25L13.125 0.3125L16.25 4.375L13.4375 5.9375L12.1875 8.125L11.25 7.8125L10 8.75L9.6875 10.9375L8.75 13.125L4.375 18.4375ZM13.125 10.3125C13.5573 10.3125 13.9719 10.4843 14.2776 10.79C14.5833 11.0957 14.7551 11.5103 14.7551 11.9426C14.7551 12.375 14.5833 12.7895 14.2776 13.0952C13.9719 13.401 13.5573 13.5727 13.125 13.5727C12.6927 13.5727 12.2781 13.401 11.9724 13.0952C11.6667 12.7895 11.4949 12.375 11.4949 11.9426C11.4949 11.5103 11.6667 11.0957 11.9724 10.79C12.2781 10.4843 12.6927 10.3125 13.125 10.3125Z"
+              fill="white"
+            />
+          </svg>
+        </div>
+        <h3 class="quote-title">Quote of the day</h3>
+
+        <p class="quote-text js-quote-text">Loading...</p>
+        <p class="quote-author js-quote-author"></p>
+      </div>
+    </div>
+  </div>
+</section>
+
+      
+      <section class="exercises" id="exercises">
+  <div class="container exercises-container">
+    <div class="exercises-header">
+      <div class="exercises-header-content">
+        <h2 class="exercises-title">Exercises</h2>
+        <p class="exercises-category-title js-category-title"></p>
+      </div>
+
+      <div class="exercises-controls">
+        <form class="search-form js-search-form is-hidden">
+          <div class="search-input-wrapper">
+            <input
+              type="text"
+              class="search-input"
+              placeholder="Search"
+              name="search"
+              autocomplete="off"
+            />
+            <button type="submit" class="search-btn">
+              <svg
+                width="18"
+                height="18"
+                viewBox="0 0 18 18"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M11.9649 11.2749L16.65 15.9547L15.9547 16.65L11.2749 11.9649C10.1411 12.8674 8.70932 13.2985 7.26662 13.1729C5.82392 13.0474 4.47403 12.3742 3.48399 11.2862C2.49395 10.1982 1.93489 8.77443 1.91659 7.29528C1.89828 5.81613 2.42204 4.38755 3.38573 3.29082C4.34942 2.19409 5.6833 1.50974 7.12359 1.3725C8.56388 1.23526 10.0071 1.65507 11.1685 2.54921C12.3299 3.44335 13.1249 4.74758 13.3953 6.20573C13.6657 7.66388 13.3916 9.17046 12.6264 10.455H12.6364H11.9649V11.2749ZM7.61635 12.2152C8.55268 12.2152 9.46736 11.9375 10.2458 11.4173C11.0243 10.897 11.6315 10.1574 11.9898 9.29235C12.3482 8.42732 12.4419 7.47545 12.2593 6.55708C12.0766 5.63871 11.6256 4.79469 10.9635 4.13259C10.3014 3.4705 9.45733 3.01946 8.53896 2.83681C7.62059 2.65415 6.66872 2.7479 5.80369 3.10625C4.93866 3.4646 4.19904 4.07185 3.6788 4.85029C3.15856 5.62874 2.88086 6.54342 2.88086 7.47975C2.8823 8.73516 3.38166 9.93876 4.26927 10.8264C5.15689 11.714 6.36049 12.2133 7.61589 12.2148L7.61635 12.2152Z"
+                  fill="#242424"
+                />
+              </svg>
+            </button>
+          </div>
+        </form>
+
+        <ul class="exercises-filter-list js-filter-list">
+          <li>
+            <button class="exercises-filter-btn active" data-filter="Muscles">
+              Muscles
+            </button>
+          </li>
+          <li>
+            <button class="exercises-filter-btn" data-filter="Body parts">
+              Body parts
+            </button>
+          </li>
+          <li>
+            <button class="exercises-filter-btn" data-filter="Equipment">
+              Equipment
+            </button>
+          </li>
+        </ul>
+      </div>
+    </div>
+
+    <ul class="exercises-list js-exercises-list"></ul>
+
+    <ul class="pagination js-pagination"></ul>
+  </div>
+</section>
+
+    </main>
+
+    <footer class="footer">
+  <div class="container footer-container">
+    <div class="footer-logo-block">
+      <a href="./index.html" class="logo footer-logo">
+        your<span class="logo-accent">energy</span>
+      </a>
+
+      <ul class="footer-socials">
+        <li>
+          <a
+            class="footer-social-link"
+            href="https://www.facebook.com/goITclub/"
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="Facebook"
+          >
+            <svg class="footer-social-icon" width="28" height="28">
+              <use href="/js-course-work/assets/sprite-E8vg0sBb.svg#icon-facebook"></use>
+            </svg>
+          </a>
+        </li>
+        <li>
+          <a
+            class="footer-social-link"
+            href="https://www.instagram.com/goitclub/"
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="Instagram"
+          >
+            <svg class="footer-social-icon" width="28" height="28">
+              <use href="/js-course-work/assets/sprite-E8vg0sBb.svg#icon-instagram"></use>
+            </svg>
+          </a>
+        </li>
+        <li>
+          <a
+            class="footer-social-link"
+            href="https://www.youtube.com/c/GoIT"
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="YouTube"
+          >
+            <svg class="footer-social-icon" width="28" height="28">
+              <use href="/js-course-work/assets/sprite-E8vg0sBb.svg#icon-youtube"></use>
+            </svg>
+          </a>
+        </li>
+      </ul>
+    </div>
+
+    <div class="footer-subscribe-block">
+      <h3 class="footer-title">Subscribe to our newsletter</h3>
+      <p class="footer-text">
+        Stay updated with the latest news and special offers.
+      </p>
+
+      <form class="footer-form js-footer-form">
+        <input
+          type="email"
+          name="email"
+          class="footer-input"
+          placeholder="Enter your email"
+          required
+        />
+        <button type="submit" class="footer-btn">Subscribe</button>
+      </form>
+    </div>
+  </div>
+</footer>
+
+<button
+  id="scrollToTopBtn"
+  class="scroll-up-btn is-hidden"
+  aria-label="Scroll to top"
+>
+  <svg
+    width="24"
+    height="24"
+    viewBox="0 0 24 24"
+    stroke="currentColor"
+    fill="none"
+  >
+    <path
+      d="M5 15L12 8L19 15"
+      stroke-width="2"
+      stroke-linecap="round"
+      stroke-linejoin="round"
+    />
+  </svg>
+</button>
+
+
+    <div class="backdrop js-backdrop is-hidden">
+  <div class="modal exercise-modal">
+    <button type="button" class="modal-close-btn js-modal-close">
+      <svg width="24" height="24" viewBox="0 0 24 24" stroke="currentColor">
+        <path
+          d="M18 6L6 18M6 6L18 18"
+          stroke-width="2"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+        />
+      </svg>
+    </button>
+
+    <div class="exercise-modal-content js-modal-content"></div>
+  </div>
+</div>
+
+
+    <div class="backdrop js-rating-backdrop is-hidden">
+  <div class="modal rating-modal">
+    <button type="button" class="modal-close-btn js-rating-close">
+      <svg width="24" height="24" viewBox="0 0 24 24" stroke="currentColor">
+        <path
+          d="M18 6L6 18M6 6L18 18"
+          stroke-width="2"
+          stroke-linecap="round"
+        />
+      </svg>
+    </button>
+
+    <p class="rating-title">Rating</p>
+
+    <div class="rating-stars-block">
+      <p class="rating-value js-rating-value">0.0</p>
+      <ul class="stars-list js-stars-list">
+        <li class="star-item" data-value="1">
+          <svg viewBox="0 0 32 32">
+            <path
+              d="M16 2 L20.32 10.75 L30 12.16 L23 18.98 L24.65 28.63 L16 24.08 L7.35 28.63 L9 18.98 L2 12.16 L11.68 10.75 Z"
+            ></path>
+          </svg>
+        </li>
+        <li class="star-item" data-value="2">
+          <svg viewBox="0 0 32 32">
+            <path
+              d="M16 2 L20.32 10.75 L30 12.16 L23 18.98 L24.65 28.63 L16 24.08 L7.35 28.63 L9 18.98 L2 12.16 L11.68 10.75 Z"
+            ></path>
+          </svg>
+        </li>
+        <li class="star-item" data-value="3">
+          <svg viewBox="0 0 32 32">
+            <path
+              d="M16 2 L20.32 10.75 L30 12.16 L23 18.98 L24.65 28.63 L16 24.08 L7.35 28.63 L9 18.98 L2 12.16 L11.68 10.75 Z"
+            ></path>
+          </svg>
+        </li>
+        <li class="star-item" data-value="4">
+          <svg viewBox="0 0 32 32">
+            <path
+              d="M16 2 L20.32 10.75 L30 12.16 L23 18.98 L24.65 28.63 L16 24.08 L7.35 28.63 L9 18.98 L2 12.16 L11.68 10.75 Z"
+            ></path>
+          </svg>
+        </li>
+        <li class="star-item" data-value="5">
+          <svg viewBox="0 0 32 32">
+            <path
+              d="M16 2 L20.32 10.75 L30 12.16 L23 18.98 L24.65 28.63 L16 24.08 L7.35 28.63 L9 18.98 L2 12.16 L11.68 10.75 Z"
+            ></path>
+          </svg>
+        </li>
+      </ul>
+    </div>
+
+    <form class="rating-form js-rating-form">
+      <input
+        type="email"
+        name="email"
+        class="rating-input"
+        placeholder="Email"
+        required
+      />
+      <textarea
+        name="comment"
+        class="rating-textarea"
+        placeholder="Your comment"
+        required
+      ></textarea>
+      <button type="submit" class="rating-btn">Send</button>
+    </form>
+  </div>
+</div>
+
+  </body>
+</html>
