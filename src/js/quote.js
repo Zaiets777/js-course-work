@@ -26,7 +26,6 @@ export async function renderQuote() {
   if (savedData && savedData.date === today) {
     quoteText.textContent = savedData.quote;
     quoteAuthor.textContent = savedData.author;
-    console.log('📜 Quote loaded from LocalStorage');
     return;
   }
 
@@ -45,8 +44,6 @@ export async function renderQuote() {
       date: today
     }));
     
-    console.log('🌍 Quote fetched from API and saved');
-
   } catch (error) {
     console.error('Error fetching quote:', error);
     quoteText.textContent = "Your energy is your greatest strength.";
